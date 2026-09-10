@@ -18,6 +18,7 @@ public class Estudiante {
     private String documento;
     private String nombre;
     private String correo;
+    private Long telefono;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "programa_academico_id")
