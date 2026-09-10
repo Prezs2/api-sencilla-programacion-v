@@ -43,11 +43,12 @@ Actualmente permite trabajar con:
 src/main/java/com/spring/activity
 │
 ├── config
-│   └── DataInitializer.java
+│   ├── DataInitializer.java
+│   └── SwaggerCustomController.java
 │
 ├── controller
 │   ├── ProgramaAcademicoController.java
-│   └── ...
+│   └── EstudianteController.java
 │
 ├── domain
 │   ├── estudiante
