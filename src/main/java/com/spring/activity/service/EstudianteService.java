@@ -23,7 +23,7 @@ public class EstudianteService {
 
     public EstudianteResponse crear (EstudianteRequest request){
         ProgramaAcademico programaAcademico = programaAcademicoRepository
-                .findById(request.programaAcademidoID())
+                .findById(request.programaAcademicoId())
                 .orElseThrow(() ->
                         new RuntimeException("Programa académico no encontrado")
                 );
