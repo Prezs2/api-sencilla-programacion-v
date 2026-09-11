@@ -33,6 +33,7 @@ public class EstudianteService {
         estudiante.setDocumento(request.documento());
         estudiante.setNombre(request.nombre());
         estudiante.setCorreo(request.correo());
+        estudiante.setTelefono(request.telefono());
         estudiante.setProgramaAcademico(programaAcademico);
 
         Estudiante estudianteGuardado = estudianteRepository.save(estudiante);
@@ -58,6 +59,7 @@ public class EstudianteService {
         estudiante.setNombre(request.nombre());
         estudiante.setDocumento(request.documento());
         estudiante.setCorreo(request.correo());
+        estudiante.setTelefono(request.telefono());
 
         Estudiante estudianteActualizado = estudianteRepository.save(estudiante);
         return convertirAResponse(estudianteActualizado);
@@ -77,6 +79,7 @@ public class EstudianteService {
                 estudiante.getId(),
                 estudiante.getNombre(),
                 estudiante.getDocumento(),
+                estudiante.getTelefono(),
                 estudiante.getProgramaAcademico().getId(),
                 estudiante.getProgramaAcademico().getNombre());
     }
