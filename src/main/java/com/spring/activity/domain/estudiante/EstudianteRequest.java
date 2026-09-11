@@ -17,8 +17,6 @@ public record EstudianteRequest(
         @Size(max = 150, message = "El correo no puede superar los 150 caracteres")
         String correo,
 
-        Long telefono,
-
         @NotNull(message = "El programa académico es obligatorio")
         @Positive(message = "El ID del programa académico debe ser mayor que 0")
         Long programaAcademicoId
