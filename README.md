@@ -5,6 +5,9 @@ API REST desarrollada con **Spring Boot** para gestionar estudiantes y programas
 El proyecto utiliza **Java 21**, **Spring Data JPA**, **SQLite**, **Hibernate**, **Bean Validation** y **Springdoc OpenAPI / Swagger**.
 
 ---
+## Integración Continua
+
+El proyecto utiliza GitHub Actions para verificar automáticamente la compilación.
 
 ## Tecnologías utilizadas
 
