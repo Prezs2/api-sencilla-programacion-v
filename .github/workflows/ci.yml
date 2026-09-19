@@ -1,0 +1,36 @@
+name: CI - Maven
+
+on:
+  push:
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: Compilar proyecto Maven
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Obtener código
+        uses: actions/checkout@v7
+
+      - name: Configurar Java 21
+        uses: actions/setup-java@v6
+        with:
+          java-version: '21'
+          distribution: 'temurin'
+          cache: 'maven'
+
+      - name: Restaurar dependencias
+        run: mvn --batch-mode dependency:go-offline
+
+      - name: Compilar
+        run: mvn --batch-mode clean compile
+
+      - name: Verificar
+        run: mvn --batch-mode test
